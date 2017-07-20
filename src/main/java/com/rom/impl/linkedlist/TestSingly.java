@@ -13,8 +13,8 @@ public class TestSingly {
 		List.addInFront(0);
 		List.add(5);
 		List.addAtIndex(0, 44);
-		//List.addAtIndex(2,22);
-		//List.deleteAtIndex(0);
+		List.addAtIndex(2,22);
+		List.deleteAtIndex(0);
 		return List;
 	}
 	
