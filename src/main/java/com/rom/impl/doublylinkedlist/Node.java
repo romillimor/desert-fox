@@ -2,6 +2,12 @@ package com.rom.impl.doublylinkedlist;
 
 public class Node {
 	int data;
-	Node next = null;
-	Node prev = null;
+	Node next;
+	Node prev;
+	
+	public Node(int data) {
+		this.data = data;
+		this.next = null;
+		this.prev = null;
+	}
 }
