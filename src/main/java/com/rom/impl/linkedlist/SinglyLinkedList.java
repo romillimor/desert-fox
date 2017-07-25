@@ -50,10 +50,10 @@ public class SinglyLinkedList {
 		Node pointer = head;
 		Node newNode = new Node(data);
 		if (head == null) head = newNode;
-		else if (this.size() < index + 1)
+		else if (this.size() < index + 1 || index < 0)
 			System.out.println("Invalid index!");
 		else if (index == 0) {
-			newNode.next = head.next;
+			newNode.next = head;
 			head = newNode;
 		}
 		else {
@@ -112,10 +112,10 @@ public class SinglyLinkedList {
 
 	public void print() {
 		Node pointer = head;
-		String temp = Integer.toString(head.data);
+		StringBuilder temp = new StringBuilder(Integer.toString(head.data));
 		while (pointer.next != null) {
 			pointer = pointer.next;
-			temp = temp + " --> " + pointer.data;
+			temp.append(" --> ").append(pointer.data);
 		}
 		System.out.println(temp);
 
