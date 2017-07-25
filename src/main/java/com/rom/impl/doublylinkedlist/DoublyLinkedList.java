@@ -19,4 +19,14 @@ public class DoublyLinkedList {
 		}
 	}
 
+	public void print() {
+		Node pointer = head;
+		String temp = Integer.toString(head.data);
+		while (pointer.next != null) {
+			pointer = pointer.next;
+			temp = temp + " <--> " + pointer.data;
+		}
+		System.out.println(temp);
+
+	}
 }

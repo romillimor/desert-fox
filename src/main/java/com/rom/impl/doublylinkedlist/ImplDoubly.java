@@ -8,6 +8,7 @@ public class ImplDoubly {
 		dList.add(56);
 		dList.add(22);
 		dList.add(12);
+		dList.print();
 	}
 	
 }
