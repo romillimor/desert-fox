@@ -84,8 +84,29 @@ public class DoublyLinkedList {
 
 		}
 	}
-
+	/// * * * *
+	public void deleteAtIndex(int index) {
+		Node pointer = head;
+		int count = 0;
+		if (head == null) System.out.println("List is already empty!");
+		else if (index > this.size() - 1 || index < 0) System.out.println("Invalid index");
+		else if (index == 0) head = head.next;
+		else if (index == this.size() -1) this.delete();
+		else {
+			while (count < index) {
+				pointer = pointer.next;
+				count++;
+			}
+			pointer.prev.next = pointer.next;
+			pointer.next.prev = pointer.prev;
+		}
+		
+	}
+	
 	public void print() {
+		
+		if (head == null) System.out.println("List is empty!");
+		else {
 		Node pointer = head;
 		String temp = Integer.toString(head.data);
 		while (pointer.next != null) {
@@ -93,6 +114,6 @@ public class DoublyLinkedList {
 			temp = temp + " <--> " + pointer.data;
 		}
 		System.out.println(temp);
-
+		}
 	}
 }
